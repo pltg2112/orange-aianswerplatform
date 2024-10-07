@@ -18,7 +18,8 @@ const handleSubmit = async () => {
   console.log('登录请求的res',res)
   if (res.data.code === 0) {
     // 登录成功
-    await loginUserStore.fetchLoginUser()
+    // await loginUserStore.fetchLoginUser()
+    loginUserStore.loginUser = res.data.data as API.LoginUserVO
     console.log('登录提交的loginUserStore.loginUser',loginUserStore.loginUser)
     message.success('登录成功')
     router.push({
