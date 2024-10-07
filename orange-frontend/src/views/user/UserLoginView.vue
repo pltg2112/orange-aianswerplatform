@@ -15,7 +15,7 @@ const loginUserStore = useLoginUserStore()
 // 提交
 const handleSubmit = async () => {
   const res = await userLoginUsingPost(form)
-
+  console.log('登录请求的res',res)
   if (res.data.code === 0) {
     // 登录成功
     await loginUserStore.fetchLoginUser()
