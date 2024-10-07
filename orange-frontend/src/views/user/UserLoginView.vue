@@ -19,6 +19,7 @@ const handleSubmit = async () => {
   if (res.data.code === 0) {
     // 登录成功
     await loginUserStore.fetchLoginUser()
+    console.log('登录提交的loginUserStore.loginUser',loginUserStore.loginUser)
     message.success('登录成功')
     router.push({
       path: '/',
