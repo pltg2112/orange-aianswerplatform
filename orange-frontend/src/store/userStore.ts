@@ -14,6 +14,7 @@ export const useLoginUserStore = defineStore('counter', () => {
 
   async function fetchLoginUser() {
     const res = await getLoginUserUsingGet()
+    console.log('res.data.code',res.data.code,'res.data',res.data)
     if (res.data.code === 0 && res.data.data) {
       loginUser.value = res.data.data
     } else {
