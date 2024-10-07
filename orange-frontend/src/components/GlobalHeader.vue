@@ -7,7 +7,6 @@ import { userLogoutUsingPost } from '@/api/userController'
 import message from '@arco-design/web-vue/es/message'
 
 const loginUserStore = useLoginUserStore()
-loginUserStore.fetchLoginUser()
 // 展示在菜单栏的可见路由
 const visibleRoutes = computed(() => {
   return routes.filter((item) => {
