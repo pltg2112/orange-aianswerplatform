@@ -44,7 +44,7 @@ const doLogout = async ()=>{
   }
 }
 onMounted(()=>{
-  console.log('loginUserStore.loginUser',loginUserStore.loginUser)
+  console.log('GlobalHeader的loginUserStore.loginUser',loginUserStore.loginUser)
 })
 </script>
 
