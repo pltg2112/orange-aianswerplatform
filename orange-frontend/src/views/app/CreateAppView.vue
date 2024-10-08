@@ -81,12 +81,12 @@ watchEffect(()=>{
         <a-form-item field="appDesc" label="应用描述">
           <a-input v-model="form.appDesc" placeholder="请输入应用描述" />
         </a-form-item>
-<!--        <a-form-item field="appIcon" label="应用图标">-->
-<!--          <a-input v-model="form.appIcon" placeholder="请输入应用图标地址" />-->
-<!--        </a-form-item>-->
         <a-form-item field="appIcon" label="应用图标">
-          <PictureUploader :value="form.appIcon" :onChange="(value) => (form.appIcon = value)" biz="app_icon"/>
+          <a-input v-model="form.appIcon" placeholder="请输入应用图标地址" />
         </a-form-item>
+<!--    <a-form-item field="appIcon" label="应用图标">-->
+<!--     <PictureUploader :value="form.appIcon" :onChange="(value) => (form.appIcon = value)" biz="app_icon"/>-->
+<!--    </a-form-item>-->
         <a-form-item field="appType" label="应用类型">
           <a-select v-model="form.appType" placeholder="请选择应用类型">
             <a-option v-for="(value, key) in APP_TYPE_MAP" :value="Number(key)" :label="value" />
