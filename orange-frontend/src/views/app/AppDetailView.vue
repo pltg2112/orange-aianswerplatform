@@ -17,6 +17,7 @@ const props = withDefaults(defineProps<Props>(), {
 })
 
 let data = ref<API.AppVO>({})
+const router = useRouter()
 /**
  * 加载数据
  */
@@ -70,10 +71,10 @@ const isMyApp = computed(() => {
         </a-col>
       </a-row>
       <a-space size="large">
-        <a-button type="primary" :href="`/answer/do/${id}`">开始答题</a-button>
-        <a-button v-if="isMyApp" :href="`/createQuestion/${id}`">创建题目</a-button>
-        <a-button v-if="isMyApp" :href="`/createScoring/${id}`">创建评分</a-button>
-        <a-button v-if="isMyApp" :href="`/createApp/${id}`">编辑应用</a-button>
+        <a-button type="primary" @click="router.push(`/answer/do/${id}`)">开始答题</a-button>
+        <a-button v-if="isMyApp" @click="router.push(`/createQuestion/${id}`)">创建题目</a-button>
+        <a-button v-if="isMyApp" @click="router.push(`/createScoring/${id}`)">创建评分</a-button>
+        <a-button v-if="isMyApp" @click="router.push(`/createApp/${id}`)">编辑应用</a-button>
         <a-button>分享应用</a-button>
       </a-space>
     </a-card>
