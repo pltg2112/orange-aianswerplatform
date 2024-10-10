@@ -5,6 +5,7 @@ import message from '@arco-design/web-vue/es/message'
 import { dayjs } from '@arco-design/web-vue/es/_utils/date'
 import { useLoginUserStore } from '@/store/userStore'
 import { APP_SCORING_STRATEGY_MAP, APP_TYPE_MAP } from '../../constant/app'
+import { useRouter } from 'vue-router'
 
 interface Props {
   id: string
